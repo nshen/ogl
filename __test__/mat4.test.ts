@@ -1,4 +1,4 @@
-import { translate } from '../src/math/functions/Mat4Func';
+import { translate } from './Mat4Func';
 import { Mat4 } from '../src/math/Mat4';
 import { Vec3 } from '../src/math/Vec3';
 
