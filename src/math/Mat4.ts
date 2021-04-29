@@ -1,4 +1,3 @@
-// import * as Mat4Func from './functions/Mat4Func';
 import { Vec3 } from './Vec3';
 import { Quat } from './Quat';
 

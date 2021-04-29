@@ -1,4 +1,4 @@
-import * as Mat3Func from './functions/Mat3Func';
+import { Mat4 } from './Mat4';
 import { Vec2 } from './Vec2';
 import { Vec3 } from './Vec3';
 
@@ -265,11 +265,21 @@ export class Mat3 extends Array<number> {
         return this;
     }
 
-    // fromMatrix4(m) {
-    //     Mat3Func.fromMat4(this, m);
-    //     return this;
-    // }
+    fromMatrix4(m: Mat4): this {
+        const t = this;
+        t[0] = m[0];
+        t[1] = m[1];
+        t[2] = m[2];
+        t[3] = m[4];
+        t[4] = m[5];
+        t[5] = m[6];
+        t[6] = m[8];
+        t[7] = m[9];
+        t[8] = m[10];
+        return this;
+    }
 
+    // TODO: quat
     // fromQuaternion(q) {
     //     Mat3Func.fromQuat(this, q);
     //     return this;
@@ -290,6 +300,21 @@ export class Mat3 extends Array<number> {
         this[index] = v.x;
         this[index + 1] = v.y;
         this[index + 2] = v.z;
+        return this;
+    }
+
+    transpose(): this {
+        const t = this;
+        let tmp: number;
+        tmp = t[1];
+        t[1] = t[3];
+        t[3] = tmp;
+        tmp = t[2];
+        t[2] = t[6];
+        t[6] = tmp;
+        tmp = t[5];
+        t[5] = t[7];
+        t[7] = tmp;
         return this;
     }
 
@@ -328,8 +353,7 @@ export class Mat3 extends Array<number> {
     }
 
     // TODO: mat4
-    // getNormalMatrix(m) {
-    //     Mat3Func.normalFromMat4(this, m);
-    //     return this;
-    // }
+    getNormalMatrix(m: Mat4): this {
+        return this.fromMatrix4(m).inverse().transpose();
+    }
 }
