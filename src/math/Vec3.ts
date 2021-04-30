@@ -1,6 +1,7 @@
 import { clamp, PI_OVER_TWO } from './MathUtils';
 import { Mat3 } from './Mat3';
 import { Mat4 } from './Mat4';
+import { Quat } from './Quat';
 
 export class Vec3 extends Array<number> {
     // constant: number; // TODO: only be used in Camera class
@@ -240,16 +241,59 @@ export class Vec3 extends Array<number> {
         return this;
     }
 
+    transformDirection(m: Mat4) {
+        const x = this[0];
+        const y = this[1];
+        const z = this[2];
+        this.x = m[0] * x + m[4] * y + m[8] * z;
+        this.y = m[1] * x + m[5] * y + m[9] * z;
+        this.z = m[2] * x + m[6] * y + m[10] * z;
+        return this.normalize();
+    }
+
     // TODO: mat4 quaternion
     // scaleRotateMatrix4(mat4) {
     //     Vec3Func.scaleRotateMat4(this, this, mat4);
     //     return this;
     // }
 
-    // applyQuaternion(q) {
-    //     Vec3Func.transformQuat(this, this, q);
-    //     return this;
-    // }
+    /**
+     * Transforms the vec3 with a quat
+     * @param q quaternion to transform with
+     * @returns
+     */
+    applyQuaternion(q: Quat): this {
+        const t = this;
+        const x = t.x,
+            y = t.y,
+            z = t.z;
+        const qx = q[0],
+            qy = q[1],
+            qz = q[2],
+            qw = q[3];
+
+        let uvx = qy * z - qz * y;
+        let uvy = qz * x - qx * z;
+        let uvz = qx * y - qy * x;
+
+        let uuvx = qy * uvz - qz * uvy;
+        let uuvy = qz * uvx - qx * uvz;
+        let uuvz = qx * uvy - qy * uvx;
+
+        let w2 = qw * 2;
+        uvx *= w2;
+        uvy *= w2;
+        uvz *= w2;
+
+        uuvx *= 2;
+        uuvy *= 2;
+        uuvz *= 2;
+
+        t[0] = x + uvx + uuvx;
+        t[1] = y + uvy + uuvy;
+        t[2] = z + uvz + uuvz;
+        return this;
+    }
 
     angle(v: Vec3): number {
         const denominator = Math.sqrt(this.squaredLen() * v.squaredLen());
@@ -283,17 +327,4 @@ export class Vec3 extends Array<number> {
         a[o + 2] = this[2];
         return a;
     }
-
-    // TODO: mat4
-    // transformDirection(mat4) {
-    //     const x = this[0];
-    //     const y = this[1];
-    //     const z = this[2];
-
-    //     this[0] = mat4[0] * x + mat4[4] * y + mat4[8] * z;
-    //     this[1] = mat4[1] * x + mat4[5] * y + mat4[9] * z;
-    //     this[2] = mat4[2] * x + mat4[6] * y + mat4[10] * z;
-
-    //     return this.normalize();
-    // }
 }

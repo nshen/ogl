@@ -1,4 +1,5 @@
 import { Mat4 } from './Mat4';
+import { Quat } from './Quat';
 import { Vec2 } from './Vec2';
 import { Vec3 } from './Vec3';
 
@@ -279,11 +280,40 @@ export class Mat3 extends Array<number> {
         return this;
     }
 
-    // TODO: quat
-    // fromQuaternion(q) {
-    //     Mat3Func.fromQuat(this, q);
-    //     return this;
-    // }
+    fromQuaternion(q: Quat): this {
+        const t = this;
+        const x = q[0],
+            y = q[1],
+            z = q[2],
+            w = q[3];
+        const x2 = x + x;
+        const y2 = y + y;
+        const z2 = z + z;
+
+        const xx = x * x2;
+        const yx = y * x2;
+        const yy = y * y2;
+        const zx = z * x2;
+        const zy = z * y2;
+        const zz = z * z2;
+        const wx = w * x2;
+        const wy = w * y2;
+        const wz = w * z2;
+
+        t[0] = 1 - yy - zz;
+        t[3] = yx - wz;
+        t[6] = zx + wy;
+
+        t[1] = yx + wz;
+        t[4] = 1 - xx - zz;
+        t[7] = zy - wx;
+
+        t[2] = zx - wy;
+        t[5] = zy + wx;
+        t[8] = 1 - xx - yy;
+
+        return this;
+    }
 
     fromBasis(vec3a: Vec3, vec3b: Vec3, vec3c: Vec3): this {
         this.setColumn(0, vec3a).setColumn(1, vec3b).setColumn(2, vec3c);

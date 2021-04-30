@@ -1,4 +1,5 @@
 import { Mat3 } from './Mat3';
+import { Mat4 } from './Mat4';
 
 export class Vec2 extends Array<number> {
     constructor(x = 0, y = x) {
@@ -166,11 +167,22 @@ export class Vec2 extends Array<number> {
         return this;
     }
 
-    // TODO: mat4
-    // applyMatrix4(mat4) {
-    //     Vec2Func.transformMat4(this, this, mat4);
-    //     return this;
-    // }
+    /**
+     * Transforms the vec2 with a mat4
+     * 3rd vector component is implicitly '0'
+     * 4th vector component is implicitly '1'
+     *
+     * @param m matrix to transform with
+     * @returns this
+     */
+    applyMatrix4(m: Mat4): this {
+        const t = this;
+        const x = t[0];
+        const y = t[1];
+        this.x = m[0] * x + m[4] * y + m[12];
+        this.y = m[1] * x + m[5] * y + m[13];
+        return this;
+    }
 
     lerp(v: Vec2, t: number): this {
         this.x += t * (v.x - this.x);
