@@ -600,7 +600,7 @@ async function loadExterior() {
             // This Look Up Table is used to calculate the BRDF (Bidirectional reflectance distribution function)
             // coefficients used in the shader more efficiently.
             // It is based on the roughness and fresnel grazing angle.
-            tLUT: { value: getTexture('assets/pbr/lut.png', false) },
+            tLUT: { value: getTexture('../../assets/pbr/lut.png', false) },
 
             // The following two environment maps are the most important inputs.
             // They can be generated using this online tool https://oframe.github.io/ibl-converter/
@@ -614,14 +614,14 @@ async function loadExterior() {
 
             // The first of the two maps is the diffuse irradiance. It's a small, blurry texture used to give
             // ambient/diffuse lighting to the model.
-            tEnvDiffuse: { value: getTexture('assets/pbr/waterfall-diffuse-RGBM.png', false) },
+            tEnvDiffuse: { value: getTexture('../../assets/pbr/waterfall-diffuse-RGBM.png', false) },
 
             // The second is the pre-filtered specular vertical atlas. It's basically 7 environment maps
             // in one, with each step half the size of the previous and also a bit blurrier.
             // It's used for specular reflections, with the different levels to be sampled depending on how
             // rough the model is at that point.
             // I've used an atlas instead of mipmaps or texture arrays for simplicity's sake.
-            tEnvSpecular: { value: getTexture('assets/pbr/waterfall-specular-RGBM.png', false) },
+            tEnvSpecular: { value: getTexture('../../assets/pbr/waterfall-specular-RGBM.png', false) },
 
             // This is a multiplier to the amount of specular. Especially useful if you don't have an HDR map.
             uEnvSpecular: { value: 2 },
