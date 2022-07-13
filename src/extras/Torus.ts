@@ -1,7 +1,7 @@
 // https://github.com/mrdoob/three.js/blob/master/src/geometries/TorusGeometry.js
 
-import { Geometry } from '../core/Geometry';
-import { Vec3 } from '../math/Vec3';
+import { Geometry } from '../core/Geometry.js';
+import { Vec3 } from '../math/Vec3.js';
 
 export class Torus extends Geometry {
     constructor(gl, { radius = 0.5, tube = 0.2, radialSegments = 8, tubularSegments = 6, arc = Math.PI * 2, attributes = {} } = {}) {

@@ -1,12 +1,12 @@
-import { Geometry } from '../core/Geometry';
-import { Transform } from '../core/Transform';
-import { Texture } from '../core/Texture';
-import { Mesh } from '../core/Mesh';
-import { GLTFAnimation } from './GLTFAnimation';
-import { GLTFSkin } from './GLTFSkin';
-import { Mat4 } from '../math/Mat4';
-import { NormalProgram } from './NormalProgram';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Geometry } from '../core/Geometry.js';
+import { Transform } from '../core/Transform.js';
+import { Texture } from '../core/Texture.js';
+import { Mesh } from '../core/Mesh.js';
+import { GLTFAnimation } from './GLTFAnimation.js';
+import { GLTFSkin } from './GLTFSkin.js';
+import { Mat4 } from '../math/Mat4.js';
+import { NormalProgram } from './NormalProgram.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 // Supports
 // [x] Geometry

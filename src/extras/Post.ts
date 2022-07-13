@@ -1,10 +1,10 @@
 // TODO: Destroy render targets if size changed and exists
 
-import { Program } from '../core/Program';
-import { Mesh } from '../core/Mesh';
-import { RenderTarget } from '../core/RenderTarget';
-import { Triangle } from './Triangle';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Program } from '../core/Program.js';
+import { Mesh } from '../core/Mesh.js';
+import { RenderTarget } from '../core/RenderTarget.js';
+import { Triangle } from './Triangle.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 export interface PostOptions {
     width: number;

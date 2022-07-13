@@ -1,5 +1,5 @@
-import { Geometry, Attribute, AttributeMap } from '../core/Geometry';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Geometry, Attribute, AttributeMap } from '../core/Geometry.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 export type PlaneOptions = {
     width: number;

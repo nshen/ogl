@@ -18,9 +18,9 @@
 // TODO: when would I disableVertexAttribArray ?
 // TODO: use offset/stride if exists
 
-import { Vec3 } from '../math/Vec3';
-import { OGLRenderingContext, RenderState } from './Renderer';
-import { Program } from './Program';
+import { Vec3 } from '../math/Vec3.js';
+import { OGLRenderingContext, RenderState } from './Renderer.js';
+import { Program } from './Program.js';
 
 const tempVec3 = new Vec3();
 

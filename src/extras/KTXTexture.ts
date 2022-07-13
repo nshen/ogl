@@ -1,4 +1,4 @@
-import { Texture, CompressedImage } from '../core/Texture';
+import { Texture, CompressedImage } from '../core/Texture.js';
 
 // TODO: Support cubemaps
 // Generate textures using https://github.com/TimvanScherpenzeel/texture-compressor

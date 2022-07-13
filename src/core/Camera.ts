@@ -1,7 +1,7 @@
-import { Mat4 } from '../math/Mat4';
-import { Vec3 } from '../math/Vec3';
-import { Transform } from './Transform';
-import { OGLRenderingContext } from './Renderer';
+import { Mat4 } from '../math/Mat4.js';
+import { Vec3 } from '../math/Vec3.js';
+import { Transform } from './Transform.js';
+import { OGLRenderingContext } from './Renderer.js';
 
 const tempMat4 = new Mat4();
 const tempVec3a = new Vec3();

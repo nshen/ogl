@@ -1,4 +1,4 @@
-import * as ColorFunc from './functions/ColorFunc';
+import * as ColorFunc from './functions/ColorFunc.js';
 
 // Color stored as an array of RGB decimal values (between 0 > 1)
 // Constructor and set method accept following formats:

@@ -1,8 +1,8 @@
-import { Camera } from '../core/Camera';
-import { Program } from '../core/Program';
-import { RenderTarget, RenderTargetOptions } from '../core/RenderTarget';
-import { OGLRenderingContext } from '../core/Renderer';
-import { Mesh } from '../core/Mesh';
+import { Camera } from '../core/Camera.js';
+import { Program } from '../core/Program.js';
+import { RenderTarget, RenderTargetOptions } from '../core/RenderTarget.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
+import { Mesh } from '../core/Mesh.js';
 
 export class Shadow {
     gl: OGLRenderingContext;

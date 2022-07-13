@@ -1,5 +1,5 @@
-import { Program, ProgramOptions } from '../core/Program';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Program, ProgramOptions } from '../core/Program.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 const vertex = /* glsl */ `
     precision highp float;

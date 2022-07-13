@@ -1,6 +1,6 @@
-import { Geometry, AttributeMap } from '../core/Geometry';
-import { Vec3 } from '../math/Vec3';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Geometry, AttributeMap } from '../core/Geometry.js';
+import { Vec3 } from '../math/Vec3.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 export type SphereOptions = {
     radius: number;

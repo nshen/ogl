@@ -1,8 +1,8 @@
-import { Mesh } from '../core/Mesh';
-import { Mat4 } from '../math/Mat4';
-import { Texture } from '../core/Texture';
-import { Camera } from '../core/Camera';
-import { isWebGl2 } from '../Guards';
+import { Mesh } from '../core/Mesh.js';
+import { Mat4 } from '../math/Mat4.js';
+import { Texture } from '../core/Texture.js';
+import { Camera } from '../core/Camera.js';
+import { isWebGl2 } from '../Guards.js';
 
 const tempMat4 = new Mat4();
 const identity = new Mat4();

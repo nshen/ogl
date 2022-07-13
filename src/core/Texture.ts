@@ -1,4 +1,4 @@
-import { OGLRenderingContext, RenderState, RendererOptions } from './Renderer';
+import { OGLRenderingContext, RenderState, RendererOptions } from './Renderer.js';
 
 // TODO: facilitate Compressed Textures
 // TODO: delete texture

@@ -1,6 +1,6 @@
-import { Transform } from './core/Transform';
-import { Mesh } from './core/Mesh';
-import { OGLRenderingContext } from './core/Renderer';
+import { Transform } from './core/Transform.js';
+import { Mesh } from './core/Mesh.js';
+import { OGLRenderingContext } from './core/Renderer.js';
 
 export const isArrayLike = <T>(term: any): term is ArrayLike<T> => {
     if (term.length) return true;

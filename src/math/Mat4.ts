@@ -1,5 +1,5 @@
-import * as Mat4Func from './functions/Mat4Func';
-import { Vec3 } from './Vec3';
+import * as Mat4Func from './functions/Mat4Func.js';
+import { Vec3 } from './Vec3.js';
 
 export class Mat4 extends Array<number> {
     constructor(

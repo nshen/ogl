@@ -1,8 +1,8 @@
-import { Vec3 } from '../math/Vec3';
-import { Transform } from './Transform';
-import { Camera } from './Camera';
-import { RenderTarget } from './RenderTarget';
-import { isMesh } from '../Guards';
+import { Vec3 } from '../math/Vec3.js';
+import { Transform } from './Transform.js';
+import { Camera } from './Camera.js';
+import { RenderTarget } from './RenderTarget.js';
+import { isMesh } from '../Guards.js';
 
 // TODO: Handle context loss https://www.khronos.org/webgl/wiki/HandlingContextLost
 

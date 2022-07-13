@@ -1,6 +1,6 @@
-import { Texture } from '../core/Texture';
-import { KTXTexture } from './KTXTexture';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Texture } from '../core/Texture.js';
+import { KTXTexture } from './KTXTexture.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 // For compressed textures, generate using https://github.com/TimvanScherpenzeel/texture-compressor
 let cache: { [key: string]: any } = {};
