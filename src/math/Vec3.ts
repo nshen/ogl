@@ -1,5 +1,5 @@
-import * as Vec3Func from './functions/Vec3Func';
-import { isArrayLike } from '../Guards';
+import * as Vec3Func from './functions/Vec3Func.js';
+import { isArrayLike } from '../Guards.js';
 export class Vec3 extends Array<number> {
     constant: number; // TODO: only be used in Camera class
     constructor(x = 0, y = x, z = x) {

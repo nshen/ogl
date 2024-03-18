@@ -1,4 +1,4 @@
-import { Vec3 } from '../math/Vec3';
+import { Vec3 } from '../math/Vec3.js';
 
 const CATMULLROM = 'catmullrom';
 const CUBICBEZIER = 'cubicbezier';

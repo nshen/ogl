@@ -1,9 +1,9 @@
-import { RenderTarget } from '../core/RenderTarget';
-import { Program } from '../core/Program';
-import { Mesh } from '../core/Mesh';
-import { Vec2 } from '../math/Vec2';
-import { Triangle } from './Triangle';
-import { OGLRenderingContext } from '../core/Renderer';
+import { RenderTarget } from '../core/RenderTarget.js';
+import { Program } from '../core/Program.js';
+import { Mesh } from '../core/Mesh.js';
+import { Vec2 } from '../math/Vec2.js';
+import { Triangle } from './Triangle.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 export interface FlowmapOptions {
     size: number; // default size of the render targets

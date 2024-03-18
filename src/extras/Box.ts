@@ -1,6 +1,6 @@
-import { Geometry, AttributeMap } from '../core/Geometry';
-import { Plane } from './Plane';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Geometry, AttributeMap } from '../core/Geometry.js';
+import { Plane } from './Plane.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 export type BoxOptions = {
     width: number;

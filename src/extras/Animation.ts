@@ -1,6 +1,6 @@
-import { Vec3 } from '../math/Vec3';
-import { Quat } from '../math/Quat';
-import { BoneTransform } from './Skin';
+import { Vec3 } from '../math/Vec3.js';
+import { Quat } from '../math/Quat.js';
+import { BoneTransform } from './Skin.js';
 
 const prevPos = new Vec3();
 const prevRot = new Quat();

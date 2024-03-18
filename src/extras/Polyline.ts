@@ -1,10 +1,10 @@
-import { Geometry } from '../core/Geometry';
-import { Program } from '../core/Program';
-import { Mesh } from '../core/Mesh';
-import { Vec2 } from '../math/Vec2';
-import { Vec3 } from '../math/Vec3';
-import { Color } from '../math/Color';
-import { OGLRenderingContext } from '../core/Renderer';
+import { Geometry } from '../core/Geometry.js';
+import { Program } from '../core/Program.js';
+import { Mesh } from '../core/Mesh.js';
+import { Vec2 } from '../math/Vec2.js';
+import { Vec3 } from '../math/Vec3.js';
+import { Color } from '../math/Color.js';
+import { OGLRenderingContext } from '../core/Renderer.js';
 
 const tmp = new Vec3();
 
